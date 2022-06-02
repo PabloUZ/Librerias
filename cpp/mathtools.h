@@ -12,11 +12,15 @@
  * @param numero El numero a verificar
  * @return True si es primo, False si no lo es
 */
-bool esPrimo(int numero) {
-    int divisible = 0;
-    for (int i = 1; i <= numero; i++) {
-        if (numero%i==0) divisible++;
+bool esPrimo(int n);
+
+
+bool esPrimo(int n){
+    int contador=0;
+    for(int i=1;i<=n;i++){
+        if(n%i==0){
+            contador++;
+        }
     }
-    if (divisible==2) return true;
-    else return false;
+    return (contador==2?true:false);
 }
